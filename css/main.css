@@ -87,6 +87,11 @@ section {
   }
 }
 
+.main a {
+  color: #1B4D6D;
+  margin: 0 5px;
+}
+
 header {
   font-family: "Overpass", sans-serif;
   color: #f7f7f7;

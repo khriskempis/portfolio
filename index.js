@@ -69,10 +69,6 @@ wordTimeline
 
 
 
-
-
-
-
   
 // scroll controller
 const controller = new ScrollMagic.Controller();
@@ -126,11 +122,10 @@ const heroScene = new ScrollMagic.Scene({
 // .addTo(controller);
 
 
+
 // section enter animation
 
 const imgs = document.querySelectorAll('.display-img');
-
-// console.log(imgs)
 
 imgs.forEach(element => {
 
