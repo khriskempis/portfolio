@@ -1,7 +1,5 @@
 
-let musicArr = ['.m', '.u', '.s', '.i', '.c']
-
-TweenMax.staggerFrom(musicArr, 0.2, {opacity: 0, y: -20}, 0.2)
+// hero text animation
 
 const wordTimeline = new TimelineMax();
 
@@ -21,7 +19,7 @@ wordTimeline
 .set('.musician-word', {display: 'block'})
 .from('.musician-word', 0.5, {
   y: -40, 
-  autoAlpha: 0, 
+  autoAlpha: 0,               
   ease: Back.easeOut
 })
 .to('.musician-word', 1, {
@@ -67,6 +65,29 @@ wordTimeline
 //   })
 
 
+// Scroll to links
+
+const linkButtons = [
+  {
+    link: document.getElementById('about-link'),
+    section: "#about-section"
+  },
+  {
+    link: document.getElementById('project-link'),
+    section: "#project-section"
+  },
+  {
+    link: document.getElementById('contact-link'),
+    section: "#contact-section"
+  },
+]
+
+linkButtons.forEach((element, i) => {
+  let node = element.link
+  node.onclick = function(){
+    TweenMax.to(window, 1 + i, {scrollTo: {y: element.section}, ease: Power2.easeOut})
+  }
+})
 
 
   
