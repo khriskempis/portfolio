@@ -1,0 +1,20 @@
+.contact {
+  margin: 10% 0;
+
+  .contact-links {
+    display: flex;
+    width: 100%;
+    max-width: 700px;
+    margin: 10% auto;
+    justify-content: space-around;
+    
+    li {
+      padding: 0% 6%;
+    }
+
+    a svg {
+      height: 30px;
+      width: 30px;
+    }
+  }
+}

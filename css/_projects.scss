@@ -1,0 +1,88 @@
+
+
+.projects {
+
+  margin-top: 10%; 
+
+  @include respond-to(large-screens) { margin-top: 0; }
+
+  .section-header {
+    opacity: 0.5;
+    margin-left: 3%;
+  }
+
+  .title {
+    font-size: 160%;
+  }
+
+  .github-link {
+    display: block;
+    margin: 4% 0; 
+  }
+
+  .music-test {
+    @include respond-to(medium-screens) { 
+      max-height: 600px;
+    } 
+  }
+
+  .project-info {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    .description {
+      width: 100%;
+      max-width: 425px;
+      padding: 2%;
+      @include respond-to(large-screens) {width: 50%;}
+
+      a svg {
+        height: 25px;
+        width: 25px;
+      }
+    }
+
+    .display-img {
+      display: block;
+      margin: 15% auto;
+      width: 30%;
+      height: 30%;
+      min-width: 300px;
+
+      @include respond-to(handhelds) {
+        padding: 1%;
+      }
+
+      @include respond-to(medium-screens) {
+        width: 40%; 
+        margin: 0;
+      }
+    }
+
+    #phone-img {
+      padding: 0;
+      margin: 5% auto;
+      min-width: 275px;
+      width: 30%;
+
+      @include respond-to(medium-screens) {
+        width: 40%;
+        max-width: 300px;
+        margin: 0; 
+        transform: translateY(-100px)
+      }
+    }
+  }
+
+  hr {
+    width: 50%;
+    margin: 15% auto;
+
+    @include respond-to(medium-screens){
+      margin: 10% auto;
+    }
+  }
+
+}
