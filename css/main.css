@@ -116,12 +116,19 @@ header h1 {
   right: 5%;
   top: 40%;
   font-weight: 100;
+  font-size: 4rem;
+}
+
+@media only screen and (min-width: 766px) {
+  header h1 {
+    font-size: 7rem;
+  }
 }
 
 header .music-word {
   position: absolute;
-  bottom: 0;
-  right: -8%;
+  bottom: 10%;
+  right: 8%;
   font-size: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -140,13 +147,27 @@ header .music-word {
 
 header .music-word .iAm {
   position: absolute;
-  right: 90%;
+  right: 20px;
   width: 110px;
   padding-right: 2%;
 }
 
+@media only screen and (min-width: 766px) {
+  header .music-word .iAm {
+    right: 70px;
+  }
+}
+
 header .music-word .word {
-  width: 150px;
+  position: absolute;
+  right: 10px;
+  width: 50px;
+}
+
+@media only screen and (min-width: 766px) {
+  header .music-word .word {
+    right: 40px;
+  }
 }
 
 header .music-word .musician-word {
