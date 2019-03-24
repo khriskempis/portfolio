@@ -114,14 +114,16 @@ header .header-background {
 header h1 {
   position: absolute;
   right: 5%;
-  top: 40%;
-  font-weight: 100;
+  top: 50%;
+  font-weight: 300;
   font-size: 4rem;
+  font-style: italic;
 }
 
 @media only screen and (min-width: 766px) {
   header h1 {
     font-size: 7rem;
+    top: 40%;
   }
 }
 

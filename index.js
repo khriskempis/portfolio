@@ -43,27 +43,6 @@ wordTimeline
 })
 .repeat(-1)
 
-// const wordsArr = ['.teacher-word', '.musician-word', '.developer-word']
-
-// const wordAnimation = 
-//   wordsArr.forEach((word, i) => {
-
-//     wordTimeline.from(word, 0.5, {
-//       y: -40,
-//       autoAlpha: 0,
-//       ease: Back.easeOut
-//     })
-//     .to(word,  1, {
-//       y: 50,
-//       autoAlpha: 0, 
-//       ease: Back.easeIn,
-//       delay: 3
-//     })
-//     .set(word,  {display: 'none'})
-    
-//     wordsArr[i+1] && wordTimeline.set(wordsArr[i+1], {display: 'block'})
-//   })
-
 
 // Scroll to links
 
@@ -109,40 +88,6 @@ const heroScene = new ScrollMagic.Scene({
 .setTween(headerTL)
 // .addIndicators()
 .addTo(controller)
-
-
-// parallax scroll effect
-
-// const headers = document.querySelectorAll('.section-header')
-
-// headers.forEach(element => {
-
-//   const headerScroll = 
-//     TweenMax.to(element, 1, {y: 200, opacity: 0})
-
-//   const Scene1 = new ScrollMagic.Scene({
-//     triggerElement: element,
-//     offset: -100,
-//     duration: '80%',
-//     triggerHook: 0.2
-
-//   })
-//   .setTween(headerScroll)
-//   .addIndicators()
-//   .addTo(controller)
-
-// })
-
-// const fixedNavbar = new ScrollMagic.Scene({
-//   triggerElement: '.projects',
-//   offset: -70,
-//   triggerHook: 'onLeave'
-// })
-// .setClassToggle('.nav-links', 'navbar-fixed')
-// .addIndicators()
-// .addTo(controller);
-
-
 
 // section enter animation
 
