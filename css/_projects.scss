@@ -13,6 +13,7 @@
 
   .title {
     font-size: 160%;
+    margin-left: 5%;
   }
 
   .github-link {
@@ -38,7 +39,12 @@
       padding: 2%;
       @include respond-to(large-screens) {width: 50%;}
 
+      a {
+        cursor: pointer;
+      }
+
       a svg {
+        margin-right: 10px;
         height: 25px;
         width: 25px;
       }

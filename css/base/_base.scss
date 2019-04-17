@@ -35,11 +35,16 @@ section {
 }
 
 .nav-links{
+  font-size: 1.5rem;
   margin: 5% auto;
   max-width: 900px;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
+
+  @include respond-to(medium-screens){
+    font-size: 1.9rem;
+  }
 
   a {
     text-decoration: none;
