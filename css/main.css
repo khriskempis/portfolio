@@ -14,8 +14,7 @@ p {
 
 body {
   margin: 0;
-  background-color: #f7f7f7;
-  font-family: "Maven Pro", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
   line-height: 1.6;
   color: #1B4D6D;
@@ -38,14 +37,12 @@ section {
 .nav-links {
   font-size: 1.5rem;
   margin: 5% auto;
-  max-width: 900px;
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 @media only screen and (min-width: 766px) {
@@ -56,60 +53,13 @@ section {
 
 .nav-links a {
   text-decoration: none;
-  color: #A03838;
-}
-
-.main {
-  margin-top: 5%;
-  position: relative;
-  overflow: hidden;
-}
-
-.main .section-header {
-  font-size: 32px;
-  font-family: "Overpass", sans-serif;
-  font-weight: 100;
-  opacity: 0.5;
-  margin-left: 3%;
-}
-
-.main p {
-  margin: 4% 0;
-  line-height: 180%;
-}
-
-.main .container {
-  margin: 2% auto;
-  padding: 2%;
-  max-width: 1000px;
-}
-
-.main .about {
-  width: 80%;
-}
-
-@media only screen and (min-width: 766px) {
-  .main .about {
-    width: 60%;
-  }
-}
-
-.main a {
-  color: #1B4D6D;
-  margin: 0 5px;
+  margin: 0 1.6rem;
 }
 
 header {
-  font-family: "Overpass", sans-serif;
-  color: #f7f7f7;
-  height: 60vh;
+  font-family: "Roboto", sans-serif;
   width: 100vw;
-  position: relative;
-  background-image: url("../assets/hero.jpg");
   opacity: 1;
-  background-repeat: none;
-  background-size: cover;
-  position: relative;
 }
 
 header .header-background {
@@ -119,12 +69,7 @@ header .header-background {
 }
 
 header h1 {
-  position: absolute;
-  right: 5%;
-  top: 50%;
   font-weight: 300;
-  font-size: 4rem;
-  font-style: italic;
 }
 
 @media only screen and (min-width: 766px) {
@@ -193,6 +138,46 @@ header .music-word .none {
 
 header #musician {
   right: 0;
+}
+
+.main {
+  margin-top: 5%;
+  position: relative;
+  overflow: hidden;
+}
+
+.main .section-header {
+  font-size: 32px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  opacity: 0.5;
+  margin-left: 3%;
+}
+
+.main p {
+  margin: 4% 0;
+  line-height: 180%;
+}
+
+.main .container {
+  margin: 2% auto;
+  padding: 2%;
+  max-width: 1000px;
+}
+
+.main .about {
+  width: 80%;
+}
+
+@media only screen and (min-width: 766px) {
+  .main .about {
+    width: 60%;
+  }
+}
+
+.main a {
+  color: #1B4D6D;
+  margin: 0 5px;
 }
 
 .projects {

@@ -1,6 +1,357 @@
-@import './base/settings';
-@import './base/base';
-@import './header';
-@import './projects';
-@import './contact';
-@import './footer';
+
+$deep-red: #A03838;
+$blue: #1B4D6D;
+$off-white: #f7f7f7;
+
+// Font Size
+$font-size-large: 1.8rem;
+$font-size-small: 1.4rem;
+
+// Spacing
+$s-size: 1.2rem;
+$m-size: 1.6rem;
+$l-size: 3.2rem;
+$xl-size: 4.8rem;
+$desktop-breakpoint: 45rem;
+
+//Fonts
+$roboto: 'Roboto', sans-serif;
+
+// Break Points
+
+$break-small: 375px;
+$break-medium: 765px;
+$break-large: 1024px;
+
+
+@mixin respond-to($media) {
+  @if $media == handhelds {
+    @media only screen and (max-width: $break-small) { @content; }
+  }
+  @else if $media == medium-screens {
+    @media only screen and (min-width: $break-medium + 1) { @content; }
+  }
+  @else if $media == large-screens { 
+    @media only screen and (min-width: $break-large) { @content; }
+  }
+}
+
+
+// ===== BASE STYLES =====
+
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: $roboto;
+  font-size: $m-size;
+  line-height: 1.6;
+  color: $blue;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+section {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.section-header {
+  color: $deep-red;
+}
+
+
+
+// ===== NAV =====
+
+.nav-links{
+  font-size: 1.5rem;
+  margin: 5% auto;
+
+  display: flex;
+  justify-content: flex-end;
+
+  @include respond-to(medium-screens){
+    font-size: 1.9rem;
+  }
+
+  a {
+    text-decoration: none;
+    margin: 0 $m-size;
+  }
+}
+
+
+
+// ===== HEADER =====
+
+header {
+  font-family: $roboto;
+  // height: 60vh;
+  width: 100vw;
+  // position: relative;
+  opacity: 1;
+
+  .header-background {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(27, 77, 109, 0.514); ;
+  }
+
+  h1 {
+    // position: absolute;
+    font-weight: 300;
+
+    @include respond-to(medium-screens){
+      font-size: 7rem;
+      top: 40%;
+    }
+  }
+
+  .music-word {
+    position: absolute;
+    bottom: 10%;
+    right: 8%;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+
+    @include respond-to(medium-screens) {
+      font-size: 30px; 
+      right: 5%;
+    }
+
+    .iAm {
+      position: absolute;
+      right: 20px;
+      width: 110px;
+      padding-right: 2%;
+
+      @include respond-to(medium-screens){
+        right: 70px;
+      }
+    }
+
+    .word {
+      position: absolute;
+      right: 10px;
+      width: 50px;
+
+      @include respond-to(medium-screens){
+        right: 40px;
+      }
+    }
+
+    .musician-word {
+      display: none;
+    }
+
+    .developer-word {
+      display: none;
+    }
+
+
+    .none{
+      display: none
+    }
+  }
+
+  #musician {
+    right: 0;
+  }
+}
+
+
+
+// ===== MAIN =====
+
+.main {
+  margin-top: 5%;
+  position: relative;
+  overflow: hidden;
+
+  .section-header {
+    font-size: 32px;
+    font-family: $roboto;
+    font-weight: 100;
+    opacity: 0.5;
+    margin-left: 3%;
+    
+  }
+
+  p {
+    margin: 4% 0;
+    line-height: 180%;
+  }
+
+  .container {
+    margin: 2% auto;
+    padding: 2%;
+    max-width: 1000px;
+  }
+
+  .about {
+    width: 80%;
+
+    @include respond-to(medium-screens) {
+      width: 60%;
+    }
+  }
+
+  a {
+    color: $blue;
+    margin: 0 5px;
+  }
+
+}
+
+// ===== PROJECTS =====
+
+
+.projects {
+
+  margin-top: 10%; 
+
+  @include respond-to(large-screens) { margin-top: 0; }
+
+  .section-header {
+    opacity: 0.5;
+    margin-left: 3%;
+  }
+
+  .title {
+    font-size: 160%;
+    margin-left: 5%;
+  }
+
+  .github-link {
+    display: block;
+    margin: 4% 0; 
+  }
+
+  .music-test {
+    @include respond-to(medium-screens) { 
+      max-height: 600px;
+    } 
+  }
+
+  .project-info {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    .description {
+      width: 100%;
+      max-width: 425px;
+      padding: 2%;
+      @include respond-to(large-screens) {width: 50%;}
+
+      a {
+        cursor: pointer;
+      }
+
+      a svg {
+        margin-right: 10px;
+        height: 25px;
+        width: 25px;
+      }
+    }
+
+    .display-img {
+      display: block;
+      margin: 15% auto;
+      width: 30%;
+      height: 30%;
+      min-width: 300px;
+
+      @include respond-to(handhelds) {
+        padding: 1%;
+      }
+
+      @include respond-to(medium-screens) {
+        width: 40%; 
+        margin: 0;
+      }
+    }
+
+    #phone-img {
+      padding: 0;
+      margin: 5% auto;
+      min-width: 275px;
+      width: 30%;
+
+      @include respond-to(medium-screens) {
+        width: 40%;
+        max-width: 300px;
+        margin: 0; 
+        transform: translateY(-100px)
+      }
+    }
+  }
+
+  hr {
+    width: 50%;
+    margin: 15% auto;
+
+    @include respond-to(medium-screens){
+      margin: 10% auto;
+    }
+  }
+}
+
+
+// ===== CONTACT =====
+
+.contact {
+  margin: 10% 0;
+
+  .contact-links {
+    display: flex;
+    width: 100%;
+    max-width: 700px;
+    margin: 10% auto;
+    justify-content: space-around;
+    
+    li {
+      padding: 0% 6%;
+    }
+
+    a svg {
+      height: 30px;
+      width: 30px;
+    }
+  }
+}
+
+
+// ===== FOOTER =====
+
+footer {
+  color: $off-white;
+  background-color: $blue;
+  font-size: 1.3rem;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    display: inline-block;
+  }
+}
