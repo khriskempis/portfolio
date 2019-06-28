@@ -6,27 +6,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Khris Kempis</title>
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/main.css">
   <link rel="shortcut icon" type="image/ico" href="./assets/favicon.ico">
 
 </head>
 <body>
   <nav>
-      <ul class="nav-links">
-          <li class="index-link"><a href="#" id="about-link">About</a></li>
-          <li class="index-link"><a href="#" id="project-link">Projects</a></li>
-          <li class="index-link"><a href="#" id="contact-link">Contact</a></li>
-        </ul>
+    <div class="headshot-container">
+      <a href="#" id="headshot"></a>
+    </div>
+    <ul class="nav-links">
+      <li class="index-link"><a href="#" id="project-link">Projects</a></li>
+      <li class="index-link"><a href="#" id="about-link">About</a></li>
+      <li class="index-link"><a href="#" id="contact-link">Contact</a></li>
+    </ul>
   </nav>
 
   <header >
-    <div class="header-overlay">
+    <div class="hero">
       <h1 class="name">Hi, my name is Khris Kempis</h1>
-      
       <ul>
         <li class="music-word">
-          <div class="iAm">I am a</div>
+          <div class="iAm">and I am a</div>
           <div class="words-animate">
             <div class="word teacher-word">teacher</div>
             <div class="word musician-word">musician</div>
@@ -34,32 +36,18 @@
           </div>
         </li>
       </ul>
+      <p>I love working on problems and can help you grow your product from start to finish.</p>
+      <button type="button">Let's chat</button>
     </div>
-
   </header>
 
   <section class="main" role="main">
-
-      <section id="about-section">
-          <h1 class="section-header">ABOUT</h1>
-    
-          <div class="container about">
-    
-            <p>I am a musician and developer currently located in the Los Angeles area. I attended the Full Stack Flex program at Thinkful where I focused on building applications designed to help people.</p>
-            <p>My passion for learning only enhances my passion for teaching. When I am not coding, I am meeting with my piano students, practicing some sick bass lines, or playing my favorite board games. You can find me performing and gigging around town working local musicals.</p>
-    
-            <p>Lets work together!</p>
-    
-          </div>
-    
-        </section>
-
-    <section class="projects" id="project-section">
+    <section class="projects container" id="project-section">
       <p class="section-header project">PROJECTS</p>
 
       <div class="container music-test">
         <h2 class="title">Music Tests</h2>
-
+        <img class="display-img" id="phone-img"src="./assets/home-device.png" alt="Music Test example">
         <div class="project-info">
           <div class="description">
             <p>Currently in beta, Music Tests is a web app designed to help music students practice their sight-reading skills. It functions much like flash cards with features such as an interactive keyboard, timed tests, and tracking scores.</p>
@@ -68,7 +56,6 @@
             <a href="https://github.com/khriskempis/music-quiz-server" target="_blank"><i class="fab fa-github"></i>server</a>
             <a href="http://www.music-tests.com" target="_blank"><i class="fas fa-desktop"></i>view site</a>
           </div>
-          <img class="display-img" id="phone-img"src="./assets/home-device.png" alt="Music Test example">
         </div>
       </div>
 
@@ -102,10 +89,20 @@
           <img class="display-img" src="./assets/data-breach.jpg" alt="Data Breach example">
         </div>
       </div>
-
       <hr/>
-
     </section>
+
+    <section id="about-section" class="container">
+        <h1 class="section-header">ABOUT</h1>
+  
+        <div class="container about">
+  
+          <p>I am a musician and developer currently located in the Los Angeles area. I attended the Full Stack Flex program at Thinkful where I focused on building applications designed to help people.</p>
+          <p>My passion for learning only enhances my passion for teaching. When I am not coding, I am meeting with my piano students, practicing some sick bass lines, or playing my favorite board games. You can find me performing and gigging around town working local musicals.</p>
+  
+          <p>Lets work together!</p>
+        </div>
+      </section>
 
     <section class="contact" id="contact-section"> 
       <h1 class="section-header">CONTACT</h1>

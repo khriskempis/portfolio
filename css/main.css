@@ -18,6 +18,7 @@ body {
   font-size: 1.6rem;
   line-height: 1.6;
   color: #1B4D6D;
+  border-top: 4px solid #0573B3;
 }
 
 ul {
@@ -25,7 +26,7 @@ ul {
   padding: 0;
 }
 
-section {
+.container {
   max-width: 1024px;
   margin: 0 auto;
 }
@@ -34,24 +35,52 @@ section {
   color: #A03838;
 }
 
-.nav-links {
-  font-size: 1.5rem;
-  margin: 5% auto;
+nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 2% 5%;
+}
+
+nav .headshot-container {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  background-color: pink;
+  overflow: hidden;
+}
+
+nav .headshot-container a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+nav .headshot-container #headshot {
+  height: 100%;
+  width: 100%;
+  background: url(../assets/headshot.jpg) 70% 5%;
+  background-size: cover;
+  background-size: 130%;
+}
+
+nav .nav-links {
+  font-size: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 @media only screen and (min-width: 766px) {
-  .nav-links {
+  nav .nav-links {
     font-size: 1.9rem;
   }
 }
 
-.nav-links a {
+nav .nav-links a {
   text-decoration: none;
   margin: 0 1.6rem;
 }
@@ -62,85 +91,93 @@ header {
   opacity: 1;
 }
 
-header .header-background {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(27, 77, 109, 0.514);
+header .hero {
+  width: 80%;
+  margin: 10% auto;
 }
 
-header h1 {
+header .hero h1 {
   font-weight: 300;
+  font-size: 20px;
+  margin: 0;
 }
 
 @media only screen and (min-width: 766px) {
-  header h1 {
-    font-size: 7rem;
-    top: 40%;
+  header .hero h1 {
+    font-size: 4rem;
   }
 }
 
-header .music-word {
-  position: absolute;
-  bottom: 10%;
-  right: 8%;
+header .hero ul {
+  margin: 0;
+}
+
+header .hero .music-word {
   font-size: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 @media only screen and (min-width: 766px) {
-  header .music-word {
+  header .hero .music-word {
     font-size: 30px;
-    right: 5%;
   }
 }
 
-header .music-word .iAm {
-  position: absolute;
-  right: 20px;
-  width: 110px;
-  padding-right: 2%;
+header .hero .music-word .iAm {
+  width: 153px;
 }
 
 @media only screen and (min-width: 766px) {
-  header .music-word .iAm {
+  header .hero .music-word .iAm {
     right: 70px;
   }
 }
 
-header .music-word .word {
-  position: absolute;
-  right: 10px;
+header .hero .music-word .word {
   width: 50px;
 }
 
 @media only screen and (min-width: 766px) {
-  header .music-word .word {
+  header .hero .music-word .word {
     right: 40px;
   }
 }
 
-header .music-word .musician-word {
+header .hero .music-word .musician-word {
   display: none;
 }
 
-header .music-word .developer-word {
+header .hero .music-word .developer-word {
   display: none;
 }
 
-header .music-word .none {
+header .hero .music-word .none {
   display: none;
 }
 
-header #musician {
-  right: 0;
+header .hero p {
+  display: block;
+  width: 50%;
+  margin-top: 1%;
+  font-size: 2rem;
+}
+
+header .hero button {
+  margin-top: 5%;
+  width: 25%;
+  padding: 1.5%;
+  border-radius: 1%;
+  background-color: #FA9F26;
+  color: #FFF8D7;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  font-weight: 400;
 }
 
 .main {
+  background-color: #FAFCFF;
   margin-top: 5%;
   position: relative;
   overflow: hidden;

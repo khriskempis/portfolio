@@ -75,19 +75,19 @@ const controller = new ScrollMagic.Controller();
 
 // hero scroll animation
 
-const headerTL = new TimelineLite();
+// const headerTL = new TimelineLite();
 
-headerTL.to('header', 5, {y: -50, opacity: 0.5})
-  .to('.name', 5, {y:50}, 0)
+// headerTL.to('header', 5, {y: -50, opacity: 0.5})
+//   .to('.name', 5, {y:50}, 0)
 
-const heroScene = new ScrollMagic.Scene({
-  triggerElement: 'header',
-  duration: '50%',
-  triggerHook: 0
-})
-.setTween(headerTL)
-// .addIndicators()
-.addTo(controller)
+// const heroScene = new ScrollMagic.Scene({
+//   triggerElement: 'header',
+//   duration: '50%',
+//   triggerHook: 0
+// })
+// .setTween(headerTL)
+// // .addIndicators()
+// .addTo(controller)
 
 // section enter animation
 
