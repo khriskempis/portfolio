@@ -48,12 +48,12 @@ wordTimeline
 
 const linkButtons = [
   {
-    link: document.getElementById('about-link'),
-    section: "#about-section"
-  },
-  {
     link: document.getElementById('project-link'),
     section: "#project-section"
+  },
+  {
+    link: document.getElementById('about-link'),
+    section: "#about-section"
   },
   {
     link: document.getElementById('contact-link'),

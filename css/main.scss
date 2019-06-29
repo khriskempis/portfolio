@@ -84,14 +84,14 @@ ul {
 nav {
   display: flex;
   justify-content: space-between;
-  margin: 2% 5%;
-
+  margin: 2% auto;
+  padding: 0 3%;
+  max-width: 1024px;
   .headshot-container {
     width: 100px;
     height: 100px;
     border-radius: 100%;
     overflow: hidden;
-
     #headshot {
       height: 100%;
       width: 100%;
@@ -99,17 +99,13 @@ nav {
       background-size: cover;
       background-size: 130%;
     }
-    
   }
-  
   .nav-links{
     font-size: 1.5rem;
     display: flex;
-  
     @include respond-to(medium-screens){
       font-size: 1.9rem;
     }
-  
     a {
       text-decoration: none;
       margin: 0 $m-size;
@@ -126,27 +122,21 @@ header {
   font-family: $roboto;
   width: 100vw;
   opacity: 1;
-
   .hero {
-
+    max-width: 1024px;
     width: 80%; 
     margin: 10% auto;
-
     h1 {
       font-weight: 300;
       font-size: 20px;
       margin: 0;
-  
       @include respond-to(medium-screens){
         font-size: 4rem;
-        
       }
     }
-
     ul { 
       margin: 0;
     }
-  
     .music-word {
       font-size: 20px;
       display: flex;
@@ -154,15 +144,13 @@ header {
         font-size: 30px; 
       }
       .iAm {
-        width: 153px;
-  
+        width: 95px;
         @include respond-to(medium-screens){
           right: 70px;
         }
       }
       .word {
         width: 50px;
-  
         @include respond-to(medium-screens){
           right: 40px;
         }
@@ -191,7 +179,7 @@ header {
       border-radius: 1%;
       background-color: #FA9F26;
       color: #FFF8D7;
-      font-size: 1.6rem;
+      font-size: 1.5rem;
       letter-spacing: 1px;
       font-weight: 400;
     }
@@ -207,113 +195,88 @@ header {
   margin-top: 5%;
   position: relative;
   overflow: hidden;
-
   p {
     margin: 4% 0;
     line-height: 180%;
   }
-
-  .container {
-    margin: 2% auto;
-    padding: 2%;
-    max-width: 1000px;
-  }
-
-  .about {
-    width: 80%;
-
-    @include respond-to(medium-screens) {
-      width: 60%;
-    }
-  }
-
   a {
     color: $blue;
     margin: 0 5px;
   }
-
+  .container {
+    display: block;
+    @include respond-to(medium-screens) { 
+      max-height: 600px;
+      display: flex;
+      justify-content: space-around;
+    } 
+  }
 }
 
 // ===== PROJECTS =====
 
+.section-header {
+  display: inline-block;
+  padding-bottom: $s-size;
+  border-bottom: 3px solid pink;
+  font-size: 20px;
+}
 
 .projects {
-
   margin-top: 10%; 
-
   @include respond-to(large-screens) { margin-top: 0; }
-
-  .section-header {
-    font-size: 20px;
-    letter-spacing: 1px;
-    &::after {
-      content: '';
-      border: 2px solid blue;
-      width: 12px;
-      height: 3px;
-    }
-  }
-
   .title {
     font-size: 160%;
     margin-left: 5%;
   }
-
   .github-link {
     display: block;
     margin: 4% 0; 
   }
-
-  .container {
-    display: flex;
-    justify-content: space-around;
-
-    @include respond-to(medium-screens) { 
-      max-height: 600px;
-    } 
+  #music-test, #data-breach {
+    flex-direction: row-reverse;
   }
-
   .img-container {
-    width: 40%;
+    width: 60%;
     height: 12em;
     margin-top: 4%;
-    border-radius: 4%;
+    border-radius: 10px;
     overflow: hidden;
-
+    margin: 0 auto;
+    @include respond-to(medium-screens) {
+      width: 40%;
+      
+    }
     .img-link {
       width: 100%;
       height: 100%;
       margin: 0;
     }
-
     #music-test-img {
       background: url(../assets/sheetmusic.jpg);
       background-size: cover;
     }
-
     #inventory-img {
       background: url(../assets/inventory-photo.jpg);
       background-size: cover;
     }
-
     #breach-img {
       background: url(../assets/matrix-laptop.jpeg) 30%;
       background-size: cover;
     }
-
-
   }
   
 
   .project-info {
-    width: 40%;
+    width: 70%;
+    margin: 0 auto;
+    @include respond-to(medium-screens) {
+      width: 40%;
+    }
     .description {
-      @include respond-to(large-screens) {}
-
       a {
         cursor: pointer;
       }
-
       a svg {
         margin-right: 10px;
         height: 25px;
@@ -322,33 +285,51 @@ header {
     }
   }
 
+}
   hr {
     width: 50%;
     margin: 15% auto;
-
     @include respond-to(medium-screens){
       margin: 10% auto;
     }
   }
+
+// ===== ABOUT =====
+
+.headshot2-container {
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  #headshot2 {
+    height: 100%;
+    width: 100%;
+    background: url(../assets/headshot2.jpg) 60% 5%;
+    background-size: cover;
+    background-size: 100%;
+  }
+}
+
+.about {
+  width: 60%;
+  margin: 0 auto;
 }
 
 
 // ===== CONTACT =====
 
 .contact {
-  margin: 10% 0;
-
   .contact-links {
     display: flex;
     width: 100%;
     max-width: 700px;
-    margin: 10% auto;
+    margin: 4% auto;
+    padding-left: 5%;
     justify-content: space-around;
-    
     li {
       padding: 0% 6%;
     }
-
     a svg {
       height: 30px;
       width: 30px;
@@ -367,7 +348,6 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-
   p {
     display: inline-block;
   }

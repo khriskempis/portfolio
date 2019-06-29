@@ -44,7 +44,9 @@ nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 2% 5%;
+  margin: 2% auto;
+  padding: 0 3%;
+  max-width: 1024px;
 }
 
 nav .headshot-container {
@@ -87,6 +89,7 @@ header {
 }
 
 header .hero {
+  max-width: 1024px;
   width: 80%;
   margin: 10% auto;
 }
@@ -121,7 +124,7 @@ header .hero .music-word {
 }
 
 header .hero .music-word .iAm {
-  width: 153px;
+  width: 95px;
 }
 
 @media only screen and (min-width: 766px) {
@@ -166,7 +169,7 @@ header .hero button {
   border-radius: 1%;
   background-color: #FA9F26;
   color: #FFF8D7;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   letter-spacing: 1px;
   font-weight: 400;
 }
@@ -183,25 +186,31 @@ header .hero button {
   line-height: 180%;
 }
 
-.main .container {
-  margin: 2% auto;
-  padding: 2%;
-  max-width: 1000px;
-}
-
-.main .about {
-  width: 80%;
-}
-
-@media only screen and (min-width: 766px) {
-  .main .about {
-    width: 60%;
-  }
-}
-
 .main a {
   color: #1B4D6D;
   margin: 0 5px;
+}
+
+.main .container {
+  display: block;
+}
+
+@media only screen and (min-width: 766px) {
+  .main .container {
+    max-height: 600px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+.section-header {
+  display: inline-block;
+  padding-bottom: 1.2rem;
+  border-bottom: 3px solid pink;
+  font-size: 20px;
 }
 
 .projects {
@@ -214,18 +223,6 @@ header .hero button {
   }
 }
 
-.projects .section-header {
-  font-size: 20px;
-  letter-spacing: 1px;
-}
-
-.projects .section-header::after {
-  content: '';
-  border: 2px solid blue;
-  width: 12px;
-  height: 3px;
-}
-
 .projects .title {
   font-size: 160%;
   margin-left: 5%;
@@ -236,26 +233,26 @@ header .hero button {
   margin: 4% 0;
 }
 
-.projects .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-@media only screen and (min-width: 766px) {
-  .projects .container {
-    max-height: 600px;
-  }
+.projects #music-test, .projects #data-breach {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
 }
 
 .projects .img-container {
-  width: 40%;
+  width: 60%;
   height: 12em;
   margin-top: 4%;
-  border-radius: 4%;
+  border-radius: 10px;
   overflow: hidden;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 766px) {
+  .projects .img-container {
+    width: 40%;
+  }
 }
 
 .projects .img-container .img-link {
@@ -280,7 +277,14 @@ header .hero button {
 }
 
 .projects .project-info {
-  width: 40%;
+  width: 70%;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 766px) {
+  .projects .project-info {
+    width: 40%;
+  }
 }
 
 .projects .project-info .description a {
@@ -293,19 +297,36 @@ header .hero button {
   width: 25px;
 }
 
-.projects hr {
+hr {
   width: 50%;
   margin: 15% auto;
 }
 
 @media only screen and (min-width: 766px) {
-  .projects hr {
+  hr {
     margin: 10% auto;
   }
 }
 
-.contact {
-  margin: 10% 0;
+.headshot2-container {
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.headshot2-container #headshot2 {
+  height: 100%;
+  width: 100%;
+  background: url(../assets/headshot2.jpg) 60% 5%;
+  background-size: cover;
+  background-size: 100%;
+}
+
+.about {
+  width: 60%;
+  margin: 0 auto;
 }
 
 .contact .contact-links {
@@ -314,7 +335,8 @@ header .hero button {
   display: flex;
   width: 100%;
   max-width: 700px;
-  margin: 10% auto;
+  margin: 4% auto;
+  padding-left: 5%;
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
