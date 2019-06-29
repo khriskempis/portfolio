@@ -14,7 +14,7 @@
 <body>
   <nav>
     <div class="headshot-container">
-      <a href="#" id="headshot"></a>
+      <a href="#" class="img-link" id="headshot"></a>
     </div>
     <ul class="nav-links">
       <li class="index-link"><a href="#" id="project-link">Projects</a></li>
@@ -42,12 +42,13 @@
   </header>
 
   <section class="main" role="main">
-    <section class="projects container" id="project-section">
-      <p class="section-header project">PROJECTS</p>
-
+    <section class="projects section-container" id="project-section">
+      <p class="section-header project">Projects</p>
+      <hr class="underline"/>
       <div class="container music-test">
-        <h2 class="title">Music Tests</h2>
-        <img class="display-img" id="phone-img"src="./assets/home-device.png" alt="Music Test example">
+        <div class="img-container">
+          <a href="#" class="img-link" id="music-test-img"></a>
+        </div>
         <div class="project-info">
           <div class="description">
             <p>Currently in beta, Music Tests is a web app designed to help music students practice their sight-reading skills. It functions much like flash cards with features such as an interactive keyboard, timed tests, and tracking scores.</p>
@@ -61,9 +62,11 @@
 
       <hr/>
 
+      <h2 class="title">Inventory Management</h2>
       <div class="container inventory">  
-        <h2 class="title">Inventory Management</h2>
-        
+        <div class="img-container">
+          <a href="#" class="img-link" id="inventory-img"></a>
+        </div>
         <div class="project-info">
           <div class="description">
             <p>A simple way to track and manage items in a company's stock. This website was inspired by my brother who is a business owner and was in need of a way to organize and track his growing inventory.</p>
@@ -71,14 +74,16 @@
             <a href="https://github.com/khriskempis/inventoryManagement" target="_blank"><i class="fab fa-github"></i>client/server</a>
             <a href="http://www.championinventory.com" target="_blank"><i class="fas fa-desktop"></i>view site</a>
           </div>
-          <img class="display-img"src="./assets/inventory.jpg" alt="Inventory Management example" />
         </div>
       </div>
 
       <hr/>
 
+      <h2 class="title">Data Breach</h2>
       <div class="container data-breach">  
-        <h2 class="title">Data Breach</h2>
+        <div class="img-container">
+            <a href="#" class="img-link" id="breach-img"></a>
+          </div>
         <div class="project-info">
           <div class="description">
             <p>Ever wonder why you get all that spam email? Data Breach answers that question and let's you know what company suffered a hack where your email may have gotten stolen.</p>
@@ -86,13 +91,12 @@
             <a href="https://github.com/khriskempis/emailHack" target="_blank"><i class="fab fa-github"></i>client</a>
             <a href="https://khriskempis.github.io/emailHack/" target="_blank"><i class="fas fa-desktop"></i>view site</a>
           </div>
-          <img class="display-img" src="./assets/data-breach.jpg" alt="Data Breach example">
         </div>
       </div>
       <hr/>
     </section>
 
-    <section id="about-section" class="container">
+    <section id="about-section" class="section-container">
         <h1 class="section-header">ABOUT</h1>
   
         <div class="container about">
@@ -104,7 +108,7 @@
         </div>
       </section>
 
-    <section class="contact" id="contact-section"> 
+    <section class="contact section-container" id="contact-section"> 
       <h1 class="section-header">CONTACT</h1>
 
       <ul class="contact-links">

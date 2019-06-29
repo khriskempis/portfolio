@@ -67,15 +67,16 @@ ul {
   padding: 0;
 }
 
-.container {
+.section-container {
   max-width: 1024px;
   margin: 0 auto;
 }
 
-.section-header {
-  color: $deep-red;
+.img-link {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
-
 
 
 // ===== NAV =====
@@ -89,18 +90,12 @@ nav {
     width: 100px;
     height: 100px;
     border-radius: 100%;
-    background-color: pink;
     overflow: hidden;
-    a {
-      display: block;
-      width: 100%;
-      height: 100%;
-    }
 
     #headshot {
       height: 100%;
       width: 100%;
-      background: url(../assets/headshot.jpg) 70% 5%;
+      background: url(../assets/headshot.jpg) 80% 5%;
       background-size: cover;
       background-size: 130%;
     }
@@ -213,15 +208,6 @@ header {
   position: relative;
   overflow: hidden;
 
-  .section-header {
-    font-size: 32px;
-    font-family: $roboto;
-    font-weight: 100;
-    opacity: 0.5;
-    margin-left: 3%;
-    
-  }
-
   p {
     margin: 4% 0;
     line-height: 180%;
@@ -258,8 +244,14 @@ header {
   @include respond-to(large-screens) { margin-top: 0; }
 
   .section-header {
-    opacity: 0.5;
-    margin-left: 3%;
+    font-size: 20px;
+    letter-spacing: 1px;
+    &::after {
+      content: '';
+      border: 2px solid blue;
+      width: 12px;
+      height: 3px;
+    }
   }
 
   .title {
@@ -272,23 +264,51 @@ header {
     margin: 4% 0; 
   }
 
-  .music-test {
+  .container {
+    display: flex;
+    justify-content: space-around;
+
     @include respond-to(medium-screens) { 
       max-height: 600px;
     } 
   }
 
-  .project-info {
+  .img-container {
+    width: 40%;
+    height: 12em;
+    margin-top: 4%;
+    border-radius: 4%;
+    overflow: hidden;
 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-
-    .description {
+    .img-link {
       width: 100%;
-      max-width: 425px;
-      padding: 2%;
-      @include respond-to(large-screens) {width: 50%;}
+      height: 100%;
+      margin: 0;
+    }
+
+    #music-test-img {
+      background: url(../assets/sheetmusic.jpg);
+      background-size: cover;
+    }
+
+    #inventory-img {
+      background: url(../assets/inventory-photo.jpg);
+      background-size: cover;
+    }
+
+    #breach-img {
+      background: url(../assets/matrix-laptop.jpeg) 30%;
+      background-size: cover;
+    }
+
+
+  }
+  
+
+  .project-info {
+    width: 40%;
+    .description {
+      @include respond-to(large-screens) {}
 
       a {
         cursor: pointer;
@@ -298,37 +318,6 @@ header {
         margin-right: 10px;
         height: 25px;
         width: 25px;
-      }
-    }
-
-    .display-img {
-      display: block;
-      margin: 15% auto;
-      width: 30%;
-      height: 30%;
-      min-width: 300px;
-
-      @include respond-to(handhelds) {
-        padding: 1%;
-      }
-
-      @include respond-to(medium-screens) {
-        width: 40%; 
-        margin: 0;
-      }
-    }
-
-    #phone-img {
-      padding: 0;
-      margin: 5% auto;
-      min-width: 275px;
-      width: 30%;
-
-      @include respond-to(medium-screens) {
-        width: 40%;
-        max-width: 300px;
-        margin: 0; 
-        transform: translateY(-100px)
       }
     }
   }
