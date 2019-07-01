@@ -26,7 +26,7 @@ $break-large: 1024px;
 
 @mixin respond-to($media) {
   @if $media == handhelds {
-    @media only screen and (max-width: $break-small) { @content; }
+    @media only screen and (min-width: $break-small) { @content; }
   }
   @else if $media == medium-screens {
     @media only screen and (min-width: $break-medium + 1) { @content; }
@@ -38,8 +38,6 @@ $break-large: 1024px;
 
 
 // ===== BASE STYLES =====
-
-
 * {
   box-sizing: border-box;
 }
@@ -67,17 +65,11 @@ ul {
   padding: 0;
 }
 
-.section-container {
-  max-width: 1024px;
-  margin: 0 auto;
-}
-
 .img-link {
   display: block;
   width: 100%;
   height: 100%;
 }
-
 
 // ===== NAV =====
 
@@ -88,32 +80,39 @@ nav {
   padding: 0 3%;
   max-width: 1024px;
   .headshot-container {
-    width: 100px;
-    height: 100px;
+    width: 60px;
     border-radius: 100%;
     overflow: hidden;
+    @include respond-to(handhelds){
+      width: 100px;
+      height: 100px;
+    }
     #headshot {
       height: 100%;
       width: 100%;
       background: url(../assets/headshot.jpg) 80% 5%;
       background-size: cover;
       background-size: 130%;
+      @include respond-to(medium-screens){
+        background-size: 130%;
+      }
     }
   }
   .nav-links{
     font-size: 1.5rem;
     display: flex;
-    @include respond-to(medium-screens){
-      font-size: 1.9rem;
-    }
     a {
       text-decoration: none;
-      margin: 0 $m-size;
+      margin: 0 $s-size;
+    }
+    @include respond-to(medium-screens){
+      font-size: 1.9rem;
+      a {
+        margin: 0 $m-size;
+      }
     }
   }
 }
-
-
 
 
 // ===== HEADER =====
@@ -125,35 +124,23 @@ header {
   .hero {
     max-width: 1024px;
     width: 80%; 
-    margin: 10% auto;
+    margin: 20% auto;
     h1 {
       font-weight: 300;
-      font-size: 20px;
+      font-size: 33px;
       margin: 0;
-      @include respond-to(medium-screens){
-        font-size: 4rem;
-      }
     }
     ul { 
       margin: 0;
     }
     .music-word {
-      font-size: 20px;
+      font-size: 25px;
       display: flex;
-      @include respond-to(medium-screens) {
-        font-size: 30px; 
-      }
       .iAm {
-        width: 95px;
-        @include respond-to(medium-screens){
-          right: 70px;
-        }
+        width: 78px;
       }
       .word {
         width: 50px;
-        @include respond-to(medium-screens){
-          right: 40px;
-        }
       }
       .musician-word {
         display: none;
@@ -164,24 +151,62 @@ header {
       .none{
         display: none
       }
+      @include respond-to(medium-screens) {
+        font-size: 30px; 
+        .iAm {
+          right: 70px;
+          width: 95px;
+        }
+        .word {
+          right: 40px;
+        }
+      }
     }
     p {
       display: block;
-      width: 50%;
-      margin-top: 1%;
-      font-size: 2rem;
+      width: 80%;
+      margin-top: 2%;
+      font-size: 1.6rem;
     }
-
+    
     button {
       margin-top: 5%;
-      width: 25%;
-      padding: 1.5%;
-      border-radius: 1%;
+      width: 40%;
+      padding: 10px;
+      border-radius: 5px;
       background-color: #FA9F26;
-      color: #FFF8D7;
-      font-size: 1.5rem;
-      letter-spacing: 1px;
-      font-weight: 400;
+      color: #fff;
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      max-width: 150px;
+    }
+  }
+  @include respond-to(handhelds){
+    .hero {
+      p {
+        width: 70%
+      }
+    }
+  }
+  @include respond-to(medium-screens){
+    .hero {
+      margin: 10% auto;
+      h1 {
+        font-size: 4rem;
+      }
+      p{
+        width: 50%;
+        font-size: 2rem;
+        margin-top: 1%;
+      }
+      button {
+        width: 25%;
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+        padding: 1.4%;
+        border-radius: 5px;
+      }
     }
   }
 }
@@ -203,28 +228,39 @@ header {
     color: $blue;
     margin: 0 5px;
   }
+  .section-container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
   .container {
     display: block;
-    @include respond-to(medium-screens) { 
-      max-height: 600px;
-      display: flex;
-      justify-content: space-around;
-    } 
+    max-width: 900px;
+    margin: 0 auto;
   }
+    @include respond-to(medium-screens) { 
+      .container {
+        max-height: 600px;
+        display: flex;
+        justify-content: space-around;
+      }
+    } 
 }
 
 // ===== PROJECTS =====
 
 .section-header {
   display: inline-block;
-  padding-bottom: $s-size;
-  border-bottom: 3px solid pink;
+  padding-bottom: 5px;
+  border-bottom: 3px solid #FA9F26;
   font-size: 20px;
 }
 
 .projects {
   margin-top: 10%; 
-  @include respond-to(large-screens) { margin-top: 0; }
+  @include respond-to(large-screens) { 
+    margin-top: 0; 
+  }
   .title {
     font-size: 160%;
     margin-left: 5%;
@@ -237,15 +273,15 @@ header {
     flex-direction: row-reverse;
   }
   .img-container {
-    width: 60%;
-    height: 12em;
-    margin-top: 4%;
+    width: 90%;
+    max-width: 400px;
+    height: 200px;
     border-radius: 10px;
     overflow: hidden;
     margin: 0 auto;
     @include respond-to(medium-screens) {
       width: 40%;
-      
+      margin-top: 12px;
     }
     .img-link {
       width: 100%;
@@ -253,11 +289,11 @@ header {
       margin: 0;
     }
     #music-test-img {
-      background: url(../assets/sheetmusic.jpg);
+      background: url(../assets/sheetmusic.jpg) center;
       background-size: cover;
     }
     #inventory-img {
-      background: url(../assets/inventory-photo.jpg);
+      background: url(../assets/inventory-photo.jpg) center;
       background-size: cover;
     }
     #breach-img {
@@ -268,11 +304,9 @@ header {
   
 
   .project-info {
-    width: 70%;
-    margin: 0 auto;
-    @include respond-to(medium-screens) {
-      width: 40%;
-    }
+    width: 90%;
+    margin: 30px auto;
+    font-size: 15px;
     .description {
       a {
         cursor: pointer;
@@ -283,16 +317,23 @@ header {
         width: 25px;
       }
     }
-  }
-
-}
-  hr {
-    width: 50%;
-    margin: 15% auto;
-    @include respond-to(medium-screens){
-      margin: 10% auto;
+    @include respond-to(handhelds) {
+      width: 80%;
+    }
+    @include respond-to(medium-screens) {
+      width: 40%;
+      font-size: 16px;
+      margin: 0 auto;
     }
   }
+}
+hr {
+  width: 50%;
+  margin: 15% auto;
+  @include respond-to(medium-screens){
+    margin: 10% auto;
+  }
+}
 
 // ===== ABOUT =====
 
@@ -312,8 +353,12 @@ header {
 }
 
 .about {
-  width: 60%;
+  width: 90%;
   margin: 0 auto;
+  @include respond-to(medium-screens){
+    margin: 0 20px;
+    width: 60%;
+  }
 }
 
 

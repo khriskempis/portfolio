@@ -26,11 +26,6 @@ ul {
   padding: 0;
 }
 
-.section-container {
-  max-width: 1024px;
-  margin: 0 auto;
-}
-
 .img-link {
   display: block;
   width: 100%;
@@ -50,10 +45,16 @@ nav {
 }
 
 nav .headshot-container {
-  width: 100px;
-  height: 100px;
+  width: 60px;
   border-radius: 100%;
   overflow: hidden;
+}
+
+@media only screen and (min-width: 375px) {
+  nav .headshot-container {
+    width: 100px;
+    height: 100px;
+  }
 }
 
 nav .headshot-container #headshot {
@@ -64,6 +65,12 @@ nav .headshot-container #headshot {
   background-size: 130%;
 }
 
+@media only screen and (min-width: 766px) {
+  nav .headshot-container #headshot {
+    background-size: 130%;
+  }
+}
+
 nav .nav-links {
   font-size: 1.5rem;
   display: -webkit-box;
@@ -71,15 +78,18 @@ nav .nav-links {
   display: flex;
 }
 
+nav .nav-links a {
+  text-decoration: none;
+  margin: 0 1.2rem;
+}
+
 @media only screen and (min-width: 766px) {
   nav .nav-links {
     font-size: 1.9rem;
   }
-}
-
-nav .nav-links a {
-  text-decoration: none;
-  margin: 0 1.6rem;
+  nav .nav-links a {
+    margin: 0 1.6rem;
+  }
 }
 
 header {
@@ -91,19 +101,13 @@ header {
 header .hero {
   max-width: 1024px;
   width: 80%;
-  margin: 10% auto;
+  margin: 20% auto;
 }
 
 header .hero h1 {
   font-weight: 300;
-  font-size: 20px;
+  font-size: 33px;
   margin: 0;
-}
-
-@media only screen and (min-width: 766px) {
-  header .hero h1 {
-    font-size: 4rem;
-  }
 }
 
 header .hero ul {
@@ -111,36 +115,18 @@ header .hero ul {
 }
 
 header .hero .music-word {
-  font-size: 20px;
+  font-size: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-@media only screen and (min-width: 766px) {
-  header .hero .music-word {
-    font-size: 30px;
-  }
-}
-
 header .hero .music-word .iAm {
-  width: 95px;
-}
-
-@media only screen and (min-width: 766px) {
-  header .hero .music-word .iAm {
-    right: 70px;
-  }
+  width: 78px;
 }
 
 header .hero .music-word .word {
   width: 50px;
-}
-
-@media only screen and (min-width: 766px) {
-  header .hero .music-word .word {
-    right: 40px;
-  }
 }
 
 header .hero .music-word .musician-word {
@@ -155,23 +141,64 @@ header .hero .music-word .none {
   display: none;
 }
 
+@media only screen and (min-width: 766px) {
+  header .hero .music-word {
+    font-size: 30px;
+  }
+  header .hero .music-word .iAm {
+    right: 70px;
+    width: 95px;
+  }
+  header .hero .music-word .word {
+    right: 40px;
+  }
+}
+
 header .hero p {
   display: block;
-  width: 50%;
-  margin-top: 1%;
-  font-size: 2rem;
+  width: 80%;
+  margin-top: 2%;
+  font-size: 1.6rem;
 }
 
 header .hero button {
   margin-top: 5%;
-  width: 25%;
-  padding: 1.5%;
-  border-radius: 1%;
+  width: 40%;
+  padding: 10px;
+  border-radius: 5px;
   background-color: #FA9F26;
-  color: #FFF8D7;
-  font-size: 1.5rem;
-  letter-spacing: 1px;
-  font-weight: 400;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  max-width: 150px;
+}
+
+@media only screen and (min-width: 375px) {
+  header .hero p {
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 766px) {
+  header .hero {
+    margin: 10% auto;
+  }
+  header .hero h1 {
+    font-size: 4rem;
+  }
+  header .hero p {
+    width: 50%;
+    font-size: 2rem;
+    margin-top: 1%;
+  }
+  header .hero button {
+    width: 25%;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    padding: 1.4%;
+    border-radius: 5px;
+  }
 }
 
 .main {
@@ -191,8 +218,16 @@ header .hero button {
   margin: 0 5px;
 }
 
+.main .section-container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
 .main .container {
   display: block;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 @media only screen and (min-width: 766px) {
@@ -208,8 +243,8 @@ header .hero button {
 
 .section-header {
   display: inline-block;
-  padding-bottom: 1.2rem;
-  border-bottom: 3px solid pink;
+  padding-bottom: 5px;
+  border-bottom: 3px solid #FA9F26;
   font-size: 20px;
 }
 
@@ -241,9 +276,9 @@ header .hero button {
 }
 
 .projects .img-container {
-  width: 60%;
-  height: 12em;
-  margin-top: 4%;
+  width: 90%;
+  max-width: 400px;
+  height: 200px;
   border-radius: 10px;
   overflow: hidden;
   margin: 0 auto;
@@ -252,6 +287,7 @@ header .hero button {
 @media only screen and (min-width: 766px) {
   .projects .img-container {
     width: 40%;
+    margin-top: 12px;
   }
 }
 
@@ -262,12 +298,12 @@ header .hero button {
 }
 
 .projects .img-container #music-test-img {
-  background: url(../assets/sheetmusic.jpg);
+  background: url(../assets/sheetmusic.jpg) center;
   background-size: cover;
 }
 
 .projects .img-container #inventory-img {
-  background: url(../assets/inventory-photo.jpg);
+  background: url(../assets/inventory-photo.jpg) center;
   background-size: cover;
 }
 
@@ -277,14 +313,9 @@ header .hero button {
 }
 
 .projects .project-info {
-  width: 70%;
-  margin: 0 auto;
-}
-
-@media only screen and (min-width: 766px) {
-  .projects .project-info {
-    width: 40%;
-  }
+  width: 90%;
+  margin: 30px auto;
+  font-size: 15px;
 }
 
 .projects .project-info .description a {
@@ -295,6 +326,20 @@ header .hero button {
   margin-right: 10px;
   height: 25px;
   width: 25px;
+}
+
+@media only screen and (min-width: 375px) {
+  .projects .project-info {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 766px) {
+  .projects .project-info {
+    width: 40%;
+    font-size: 16px;
+    margin: 0 auto;
+  }
 }
 
 hr {
@@ -325,8 +370,15 @@ hr {
 }
 
 .about {
-  width: 60%;
+  width: 90%;
   margin: 0 auto;
+}
+
+@media only screen and (min-width: 766px) {
+  .about {
+    margin: 0 20px;
+    width: 60%;
+  }
 }
 
 .contact .contact-links {
