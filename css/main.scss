@@ -164,7 +164,7 @@ header {
     }
     p {
       display: block;
-      width: 80%;
+      width: 100%;
       margin-top: 2%;
       font-size: 1.6rem;
     }
@@ -177,16 +177,8 @@ header {
       background-color: #FA9F26;
       color: #fff;
       font-size: 1.2rem;
-      font-weight: 700;
       letter-spacing: 0.5px;
       max-width: 150px;
-    }
-  }
-  @include respond-to(handhelds){
-    .hero {
-      p {
-        width: 70%
-      }
     }
   }
   @include respond-to(medium-screens){
@@ -269,7 +261,7 @@ header {
     display: block;
     margin: 4% 0; 
   }
-  #music-test, #data-breach {
+  #music-test, #data-breach, #inventory {
     flex-direction: row-reverse;
   }
   .img-container {
@@ -290,6 +282,10 @@ header {
     }
     #music-test-img {
       background: url(../assets/sheetmusic.jpg) center;
+      background-size: cover;
+    }
+    #sanford-img {
+      background: url(../assets//sanford-img.jpg) center;
       background-size: cover;
     }
     #inventory-img {
@@ -317,13 +313,20 @@ header {
         width: 25px;
       }
     }
-    @include respond-to(handhelds) {
-      width: 80%;
+  }
+  @include respond-to(handhelds) {
+    .project-info {
+      width: 88%;
     }
-    @include respond-to(medium-screens) {
+  }
+  @include respond-to(medium-screens) {
+    .project-info {
       width: 40%;
       font-size: 16px;
       margin: 0 auto;
+    }
+    .title {
+      margin-left: 9.5%;
     }
   }
 }
@@ -332,6 +335,22 @@ hr {
   margin: 15% auto;
   @include respond-to(medium-screens){
     margin: 10% auto;
+  }
+}
+
+.view-projects {
+  position: relative;
+  a {
+    display: block;
+    position: absolute;
+    right: 43%;
+    bottom: -20px
+  }
+  @include respond-to(medium-screens){
+    a {
+      right: 50%;
+      bottom: -60px;
+    }
   }
 }
 
@@ -396,4 +415,13 @@ footer {
   p {
     display: inline-block;
   }
+}
+
+
+// =======================
+// ==== PROJECT PAGE =====
+// =======================
+
+.project-main {
+  margin-top: 0;
 }

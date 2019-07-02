@@ -156,7 +156,7 @@ header .hero .music-word .none {
 
 header .hero p {
   display: block;
-  width: 80%;
+  width: 100%;
   margin-top: 2%;
   font-size: 1.6rem;
 }
@@ -169,15 +169,8 @@ header .hero button {
   background-color: #FA9F26;
   color: #fff;
   font-size: 1.2rem;
-  font-weight: 700;
   letter-spacing: 0.5px;
   max-width: 150px;
-}
-
-@media only screen and (min-width: 375px) {
-  header .hero p {
-    width: 70%;
-  }
 }
 
 @media only screen and (min-width: 766px) {
@@ -268,7 +261,7 @@ header .hero button {
   margin: 4% 0;
 }
 
-.projects #music-test, .projects #data-breach {
+.projects #music-test, .projects #data-breach, .projects #inventory {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
@@ -302,6 +295,11 @@ header .hero button {
   background-size: cover;
 }
 
+.projects .img-container #sanford-img {
+  background: url(../assets//sanford-img.jpg) center;
+  background-size: cover;
+}
+
 .projects .img-container #inventory-img {
   background: url(../assets/inventory-photo.jpg) center;
   background-size: cover;
@@ -330,7 +328,7 @@ header .hero button {
 
 @media only screen and (min-width: 375px) {
   .projects .project-info {
-    width: 80%;
+    width: 88%;
   }
 }
 
@@ -339,6 +337,9 @@ header .hero button {
     width: 40%;
     font-size: 16px;
     margin: 0 auto;
+  }
+  .projects .title {
+    margin-left: 9.5%;
   }
 }
 
@@ -350,6 +351,24 @@ hr {
 @media only screen and (min-width: 766px) {
   hr {
     margin: 10% auto;
+  }
+}
+
+.view-projects {
+  position: relative;
+}
+
+.view-projects a {
+  display: block;
+  position: absolute;
+  right: 43%;
+  bottom: -20px;
+}
+
+@media only screen and (min-width: 766px) {
+  .view-projects a {
+    right: 50%;
+    bottom: -60px;
   }
 }
 
@@ -420,5 +439,9 @@ footer {
 
 footer p {
   display: inline-block;
+}
+
+.project-main {
+  margin-top: 0;
 }
 /*# sourceMappingURL=main.css.map */
