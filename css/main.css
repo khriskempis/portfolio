@@ -81,6 +81,11 @@ nav .nav-links {
 nav .nav-links a {
   text-decoration: none;
   margin: 0 1.2rem;
+  color: #0573B3;
+}
+
+nav .nav-links a:visited {
+  color: #0573B3;
 }
 
 @media only screen and (min-width: 766px) {
