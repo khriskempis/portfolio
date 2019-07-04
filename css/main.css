@@ -239,6 +239,7 @@ header .hero button {
   padding-bottom: 5px;
   border-bottom: 3px solid #FA9F26;
   font-size: 20px;
+  font-weight: 400;
 }
 
 .projects {
@@ -354,21 +355,24 @@ hr {
   }
 }
 
-.view-projects {
-  position: relative;
+.view-button-container {
+  text-align: center;
+  margin: 25px 0;
 }
 
-.view-projects a {
-  display: block;
-  position: absolute;
-  right: 43%;
-  bottom: -20px;
+.view-button-container .secondary-button {
+  color: #FA9F26 !important;
+  border: 2px solid #FA9F26;
+  text-decoration: none;
+  padding: 8px 10px;
+  font-size: 14px;
+  border-radius: 5px;
 }
 
 @media only screen and (min-width: 766px) {
-  .view-projects a {
-    right: 50%;
-    bottom: -60px;
+  .view-button-container .secondary-button {
+    padding: 10px 15px;
+    font-size: 16px;
   }
 }
 
@@ -397,6 +401,49 @@ hr {
   .about {
     margin: 0 20px;
     width: 60%;
+  }
+}
+
+.gig-table {
+  margin: 3em auto;
+  width: 100%;
+  font-size: 12px;
+  border-collapse: collapse;
+}
+
+.gig-table tr {
+  margin: 5px 0;
+  border-radius: 50px;
+}
+
+.gig-table tr:nth-child(odd) {
+  background: #ccdde938;
+}
+
+.gig-table td {
+  padding: 10px;
+  text-align: center;
+}
+
+.gig-table .name {
+  font-weight: 700;
+  font-size: 10px;
+}
+
+.gig-table .type {
+  font-size: 10px;
+}
+
+@media only screen and (min-width: 766px) {
+  .gig-table {
+    width: 80%;
+    font-size: 16px;
+  }
+  .gig-table .name {
+    font-size: 14px;
+  }
+  .gig-table .type {
+    font-size: 14px;
   }
 }
 
