@@ -46,27 +46,27 @@ wordTimeline
 
 // Scroll to links
 
-const linkButtons = [
-  {
-    link: document.getElementById('project-link'),
-    section: "#project-section"
-  },
-  {
-    link: document.getElementById('about-link'),
-    section: "#about-section"
-  },
-  {
-    link: document.getElementById('contact-link'),
-    section: "#contact-section"
-  },
-]
+// const linkButtons = [
+//   {
+//     link: document.getElementById('project-link'),
+//     section: "#project-section"
+//   },
+//   {
+//     link: document.getElementById('about-link'),
+//     section: "#about-section"
+//   },
+//   {
+//     link: document.getElementById('contact-link'),
+//     section: "#contact-section"
+//   },
+// ]
 
-linkButtons.forEach((element, i) => {
-  let node = element.link
-  node.onclick = function(){
-    TweenMax.to(window, 1 + i, {scrollTo: {y: element.section}, ease: Power2.easeOut})
-  }
-})
+// linkButtons.forEach((element, i) => {
+//   let node = element.link
+//   node.onclick = function(){
+//     TweenMax.to(window, 1 + i, {scrollTo: {y: element.section}, ease: Power2.easeOut})
+//   }
+// })
 
 
   
