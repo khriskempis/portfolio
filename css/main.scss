@@ -200,7 +200,7 @@ header {
       }
       button {
         width: 25%;
-        font-size: 1.4rem;
+        font-size: 1.7rem;
         letter-spacing: 1px;
         padding: 1.4%;
         border-radius: 5px;
@@ -393,7 +393,7 @@ hr {
 // ===== Gigs =====
 
 .gig-table {
-  margin: 3em auto;
+  margin: 1em auto 3em;
   width: 100%;
   font-size: 12px;
   border-collapse: collapse;
@@ -412,11 +412,13 @@ hr {
     font-weight: 700;
     font-size: 10px;
   }
+  .date {
+    text-align: left;
+  }
   .type {
     font-size: 10px;
   }
   @include respond-to(medium-screens){
-    width: 80%;
     font-size: 16px;
     .name {
       font-size: 14px;
@@ -428,39 +430,34 @@ hr {
 }
 
 
-// ===== CONTACT =====
-
-.contact {
-  .contact-links {
-    display: flex;
-    width: 100%;
-    max-width: 700px;
-    margin: 4% auto;
-    padding-left: 5%;
-    justify-content: space-around;
-    li {
-      padding: 0% 6%;
-    }
-    a svg {
-      height: 30px;
-      width: 30px;
-    }
-  }
-}
-
-
 // ===== FOOTER =====
 
 footer {
   color: $off-white;
   background-color: $dark-blue;
   font-size: 1.3rem;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  p {
-    display: inline-block;
+  padding-bottom: 30px;
+  .copyright-container {
+    text-align: center;
+    h3 {
+      margin: 0;
+      font-weight: 400;
+    }
+  }
+  .contact-links {
+    display: flex;
+    max-width: 300px;
+    margin: 10px auto;
+    padding-top: 30px;
+    justify-content: space-around;
+    li {
+      padding: 0% 6%;
+    }
+    a svg {
+      height: 50px;
+      width: 30px !important;
+      color: $accent-color;
+    }
   }
 }
 
@@ -482,7 +479,7 @@ footer {
 .gigs-main {
   background: #fff;
   .gig-table {
-    margin: 3em auto;
+    margin: 1em auto 3em;
     width: 100%;
     font-size: 12px;
     border-collapse: collapse;
@@ -503,6 +500,7 @@ footer {
     .name {
       font-weight: 700;
       font-size: 10px;
+      max-width: 150px;
     }
     .type {
       font-size: 10px;
@@ -520,6 +518,12 @@ footer {
 
 }
 .month {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
+  h4 {
+    margin-bottom: 0;
+  }
+  @include respond-to(medium-screens){
+    width: 80%;
+  }
 }

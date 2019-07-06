@@ -192,7 +192,7 @@ header .hero button {
   }
   header .hero button {
     width: 25%;
-    font-size: 1.4rem;
+    font-size: 1.7rem;
     letter-spacing: 1px;
     padding: 1.4%;
     border-radius: 5px;
@@ -410,7 +410,7 @@ hr {
 }
 
 .gig-table {
-  margin: 3em auto;
+  margin: 1em auto 3em;
   width: 100%;
   font-size: 12px;
   border-collapse: collapse;
@@ -435,13 +435,16 @@ hr {
   font-size: 10px;
 }
 
+.gig-table .date {
+  text-align: left;
+}
+
 .gig-table .type {
   font-size: 10px;
 }
 
 @media only screen and (min-width: 766px) {
   .gig-table {
-    width: 80%;
     font-size: 16px;
   }
   .gig-table .name {
@@ -452,45 +455,41 @@ hr {
   }
 }
 
-.contact .contact-links {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  max-width: 700px;
-  margin: 4% auto;
-  padding-left: 5%;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-.contact .contact-links li {
-  padding: 0% 6%;
-}
-
-.contact .contact-links a svg {
-  height: 30px;
-  width: 30px;
-}
-
 footer {
   color: #f7f7f7;
   background-color: #1B4D6D;
   font-size: 1.3rem;
-  height: 50px;
+  padding-bottom: 30px;
+}
+
+footer .copyright-container {
+  text-align: center;
+}
+
+footer .copyright-container h3 {
+  margin: 0;
+  font-weight: 400;
+}
+
+footer .contact-links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  max-width: 300px;
+  margin: 10px auto;
+  padding-top: 30px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-footer p {
-  display: inline-block;
+footer .contact-links li {
+  padding: 0% 6%;
+}
+
+footer .contact-links a svg {
+  height: 50px;
+  width: 30px !important;
+  color: #FA9F26;
 }
 
 .project-main {
@@ -502,7 +501,7 @@ footer p {
 }
 
 .gigs-main .gig-table {
-  margin: 3em auto;
+  margin: 1em auto 3em;
   width: 100%;
   font-size: 12px;
   border-collapse: collapse;
@@ -529,6 +528,7 @@ footer p {
 .gigs-main .gig-table .name {
   font-weight: 700;
   font-size: 10px;
+  max-width: 150px;
 }
 
 .gigs-main .gig-table .type {
@@ -548,7 +548,17 @@ footer p {
 }
 
 .month {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
+}
+
+.month h4 {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width: 766px) {
+  .month {
+    width: 80%;
+  }
 }
 /*# sourceMappingURL=main.css.map */
