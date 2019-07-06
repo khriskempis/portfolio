@@ -166,7 +166,10 @@ header .hero p {
   font-size: 1.6rem;
 }
 
-header .hero button {
+header .hero a {
+  text-decoration: none;
+  text-align: center;
+  display: block;
   margin-top: 5%;
   width: 40%;
   padding: 10px;
@@ -190,7 +193,7 @@ header .hero button {
     font-size: 2rem;
     margin-top: 1%;
   }
-  header .hero button {
+  header .hero a {
     width: 25%;
     font-size: 1.7rem;
     letter-spacing: 1px;
